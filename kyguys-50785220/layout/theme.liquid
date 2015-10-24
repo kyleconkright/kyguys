@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{% if template contains 'product' %}{{ shop.name }} - {{ product.title }} {%else%} {{ shop.name }} {%endif%}</title>
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+		{{ content_for_header }}
+		{{ 'style.min.css' | asset_url | stylesheet_tag }}
+		{{ 'settings.scss.css' | asset_url | stylesheet_tag }}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+
+	<body>
+	
+		{{ content_for_layout }}
+		{{ 'script.min.js' | asset_url | script_tag }}
+		
+	</body>
+</html>
